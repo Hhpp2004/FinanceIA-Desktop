@@ -61,7 +61,6 @@ public class SaldoController {
 
     private void atualizarSaldoExtrato(Extrato extrato, Operacao operacao) {
         Saldo saldo = extrato.getSaldo();
-
         if (saldo == null) {
             saldo = new Saldo();
             extrato.setSaldo(saldo);
@@ -79,7 +78,7 @@ public class SaldoController {
     }
 
     private String nomeExtrato(LocalDate data) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM / yyyy", new Locale("pt", "BR"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM / yyyy",  Locale.of("pt", "BR"));
         String nome = data.format(formatter);
         return nome.substring(0, 1).toUpperCase() + nome.substring(1);
     }

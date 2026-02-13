@@ -436,7 +436,7 @@ public class DashboardView {
     }
 
     private String dataFormatado(LocalDate data) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(" dd / MMMM / yyyy",new Locale("pt","BR"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(" dd / MMMM / yyyy",Locale.of("pt","BR"));
         String nome = data.format(formatter);
         return nome.substring(0, 1).toUpperCase() + nome.substring(1);
     }
@@ -485,7 +485,7 @@ public class DashboardView {
 
     private String formataMoeda(Double valor) {
         return NumberFormat
-                .getCurrencyInstance(new Locale("pt", "BR"))
+                .getCurrencyInstance(Locale.of("pt", "BR"))
                 .format(valor);
     }
 }
