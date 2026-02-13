@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Launcher<financas-desktop>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "financas.bb.com.Launcher",
+            "projectName": "financas-desktop",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
