@@ -6,8 +6,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Component;
 
 import financas.bb.com.Controller.SaldoController;
@@ -219,7 +217,7 @@ public class DashboardView {
     /* ================= DADOS ================= */
 
     private String nomeExtrato(LocalDate data) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM / yyyy", new Locale("pt", "BR"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM / yyyy", Locale.of("pt", "BR"));
         String nome = data.format(formatter);
         return nome.substring(0, 1).toUpperCase() + nome.substring(1);
     }
